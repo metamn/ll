@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+#index 
+  .col-1
+    #intro.block
+      %h1
+        Hello 37Signals!
+      #text
+        %p
+          I'm here to 
+          %span.learn learn 
+          about us and enjoy 
+          %span.beauty beauty.
+        %p
+          Meantime to support myself I've 
+          %span.self-taught self-taught 
+          to 
+          %span.design design 
+          and 
+          %span.develop develop 
+          (mostly for web)
+    #timeline.block
+      #design.col-11
+        %ul
+          %li.eleven
+            %span.date 11 
+            Shopify
+          %li.ten
+            %span.date 10 
+            Smuff
+          %li.nine
+            %span.date 09 
+            clair
+          %li.eight
+            %span.date 08 
+            xxx
+          %li.seven
+            %span.date 07 
+            arigato
+      #develop.col-12
+        %ul
+          %li.ten
+            %span.date 10 
+            Kobi (Ruby on Rails)
+          %li.ten
+            %span.date 10 
+            Smuff (Wordpress)
+          %li.eight
+            %span.date 08 
+            Tusnad (Ruby on Rails)
+      #startup.block
+        %h3 Oh, I've also co-founded Smuff
+        %img{:src => '/images/smuff-icon.jpg'}
+        
+  .col-2
+    #writings
+      {% for post in site.posts %}
+      #item
+        %h5
+          {{ post.title }}
+        {{ post.excerpt }}    
+      {% endfor %}
+    #shopify
+      %ul.inline-list
+        %li
+          #circle.scrol
+            &nbsp;
+        %li
+          #circle.scrol-sf
+            &nbsp;
+        %li.last
+          #circle.scrol-madrid
+            &nbsp;
+      #text
+        Shopify thought me designing in such way to use a minimum set of elements
+        
+              
+    
