@@ -1,33 +1,19 @@
-jQuery.noConflict();
-     
+$(function() {
 
-jQuery(document).ready(function(){
-  
-  // Show contact info on click
-  jQuery("#contact li").click(function() {
-    jQuery(this).next().toggleClass('hidden', 1000).slow();
-  });
+	// select #flowplanes and make it scrollable. use circular and navigator plugins
+	$("#flowpanes").scrollable({ circular: true, mousewheel: true }).navigator({
 
-  // Creating TOC for products and articles
-  var toc = jQuery("#article #body > :header:not(h4,h5,h6)");
-  if ( toc.size() > 0) {
-    jQuery("#article #toc").removeClass('hidden');
-    var res = "<ul class='underlined'>";
-    toc.each(function(index) { 
-      var ref = "id" + index;
-      var id = jQuery(this).attr("id");
-      jQuery(this).attr("id", ref);
-      res = res + "<li><a href='#" + ref + "'>" + this.innerHTML + '</a></li>';
-    });
-    res += "</ul>";
-    jQuery("#article #toc").append(res);
-  }
+		// select #flowtabs to be used as navigator
+		navi: "#flowtabs",
 
-  // Show features on footer icons
-  jQuery("#footer #icons img").click(function() {
-    var txt = jQuery(this).attr('title');
-    jQuery("#footer #text h2").html(txt);
-  });
-     
-    
-}); 
+		// select A tags inside the navigator to work as items (not direct children)
+		naviItem: 'a',
+
+		// assign "current" class name for the active A tag inside navigator
+		activeClass: 'current',
+
+		// make browser's back button work
+		history: true
+
+	});
+});

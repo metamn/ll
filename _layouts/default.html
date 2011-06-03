@@ -3,7 +3,11 @@
 <html>
   <head>
     <title>
-      {{ site.name }}      
+      {% if page.title != _blank %}
+        {{ page.title }} - {{ site.name }}
+      {% else %}
+        {{ site.strapline }} - {{ site.name }}
+      {% endif %}
     </title>
     <link href="/css/base.css" media="all" type="text/css" rel="stylesheet">
     <link href="/css/layout.css" media="all" type="text/css" rel="stylesheet">
@@ -14,15 +18,19 @@
 	  <link href="/css/wide.css" charset="utf-8" media="screen and (min-width: 1025px) and (max-width: 1399px)" rel="stylesheet" type="text/css" />
     <link href="/css/large.css" charset="utf-8" media="screen and (min-width: 1400px)" rel="stylesheet" type="text/css" />        
     
+    
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdn.jquerytools.org/1.2.5/jquery.tools.min.js"></script>
     <script type="text/javascript" src="/js/jquery.init.js"></script>
   </head>
   
   <body>
+    {% include header.html %}
     <div id="content" class="block">
       <div class="container">
         {{ content }}
       </div>
     </div>
+    {% include footer.html %}
   </body>
 </html>

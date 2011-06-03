@@ -3,78 +3,55 @@ layout: default
 ---
 
 #index 
-  .col-1
-    #intro.block
+  #intro.block
+    .col-1 
       %h1
-        Hello 37Signals!
-      #text
-        %p
-          I'm here to 
-          %span.learn learn 
-          about us and enjoy 
-          %span.beauty beauty.
-        %p
-          Meantime to support myself I've 
-          %span.self-taught self-taught 
-          to 
-          %span.design design 
-          and 
-          %span.develop develop 
-          (mostly for web)
-    #timeline.block
-      #design.col-11
-        %ul
-          %li.eleven
-            %span.date 11 
-            Shopify
-          %li.ten
-            %span.date 10 
-            Smuff
-          %li.nine
-            %span.date 09 
-            clair
-          %li.eight
-            %span.date 08 
-            xxx
-          %li.seven
-            %span.date 07 
-            arigato
-      #develop.col-12
-        %ul
-          %li.ten
-            %span.date 10 
-            Kobi (Ruby on Rails)
-          %li.ten
-            %span.date 10 
-            Smuff (Wordpress)
-          %li.eight
-            %span.date 08 
-            Tusnad (Ruby on Rails)
-      #startup.block
-        %h3 Oh, I've also co-founded Smuff
-        %img{:src => '/images/smuff-icon.jpg'}
+        Learn English Online
         
-  .col-2
-    #writings
-      {% for post in site.posts %}
-      #item
-        %h5
-          {{ post.title }}
-        {{ post.excerpt }}    
-      {% endfor %}
-    #shopify
-      %ul.inline-list
-        %li
-          #circle.scrol
-            &nbsp;
-        %li
-          #circle.scrol-sf
-            &nbsp;
-        %li.last
-          #circle.scrol-madrid
-            &nbsp;
-      #text
-        Shopify thought me designing in such way to use a minimum set of elements
+    .col-2
+      %h1
+        with Real People
+      .info
+        {% for teacher in site.categories.teachers %}
+        .teacher
+          .name.block
+            {{ teacher.name }}, {{ teacher.country }}
+          %ul.inline-list
+            %li.irl
+              %img{:src => "{{teacher.irl}}", :class => 'avatar', :title => "{{ teacher.name }}" }  
+            %li.avatar
+              %img{:src => "{{teacher.avatar}}", :class => 'avatar', :title => "{{ teacher.name }}"  }                        
+        {% endfor %}
         
-              
-    
+    .col-3
+      %h1
+        in a Virtual 3D City
+      .info
+        -#%iframe{:width => 425, :height => 349, :src => "http://www.youtube.com/embed/U9Pgd0YpOoo", :frameborder => "0" }
+        video here
+        .more
+          %a{:href => "http://www.youtube.com/user/languagelabdotcom", :target => "_blank", :title => "More videos on Youtube"} See more videos 
+      
+  #features.block
+    %ul{:id => 'flowtabs', :class => 'navi'}
+      %li 
+        %a{:id => "t1", :href => "#relax"} Relax
+      %li 
+        %a{:id => "t2", :href => "#interests"} Follow Your Interests
+      %li 
+        %a{:id => "t3", :href => "#fun"} Have Fun
+      %li 
+        %a{:id => "t4", :href => "#pro"} Be Professional
+    #flowpanes
+      .items
+        .narrow
+        #relax
+          Relax is here ....
+        #interests
+          Follow ur interest ....
+        #fun
+          have fun ....
+        #pro
+          be proooooooooooo
+        .narrow  
+          

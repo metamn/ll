@@ -1,5 +1,6 @@
 .container {
   width: 90%;
+  max-width: 80em;
   margin: 0 auto;
 }
 
@@ -14,72 +15,108 @@
 /* Stranded, em */
 body { font-size:100%; line-height:1.25; }
 h1, h2, h3 { margin-top:0; margin-bottom:0; }
-h1 { font-size:3.23077em; padding:1.30935em 0; }
-h2 { font-size:2.61538em; padding:1.28666em 0; }
-h3 { font-size:2em; padding:1.25em 0; }
-h4 { font-size:1.61538em; padding:1.30936em 0; }
 
-h3 + h4 {
-  padding-top: 0;
-}
+
 
 img {
   max-width: 100%;
   height: auto;
 }
-
-
-
-
-.col-1 {
-  width: 50%;
-  margin-right: 10%;
-  float: left;
-}
-.col-2 {
-  width: 40%;
-  float: left;
+img.avatar {
+  width: 100px;
+  height: 100px;
 }
 
 
-.col-11 {
-  margin-right: 10%;
-  float: left;
+/* 
+  Header 
+*/
+
+#header {
+  margin-bottom: 2.5em;
 }
-.col-12 {
-  float: left;
+#header h1 {
+  padding-bottom: 0;
+}
+#header h3 {
+  padding: 0;
 }
 
 
-#timeline {
-  margin-top: 2.5em;
-}
-#timeline ul {
-  list-style-type: none;
-}
-#timeline ul li {
-  border-bottom: 1px solid;
-}
 
 
-#shopify {
-  margin-top: 2.5em;
-}
-#shopify li {
+/*
+  Index
+*/
+
+#index .col-1, #index .col-2, #index .col-3 {
   width: 30%;
-  margin-right: 4%;
+  margin-right: 5%;
+  float: left;
 }
-#shopify li.last {
+#index .col-3 {
   margin-right: 0;
 }
-#shopify #circle {
-  width: 8em;
-  height: 8em;
-  -moz-border-radius: 5em;
+
+
+#flowtabs {
+    margin: 0 !important;
+    padding: 0;
+    width: 760px;
+}
+#flowtabs li {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+}
+#flowtabs li a {
+    display: block;
+    height: 31px;
+    line-height: 33px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 189px;
+}
+
+#flowpanes {
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    height: 450px;
+    width: 760px;
+}
+#flowpanes .items {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 20000em;
+}
+#flowpanes div {
+    display: block;
+    float: left;
+    font-size: 14px;
+    width: 760px;
 }
 
 
 
+
+
+
+
+
+/* 
+  Footer 
+*/
+
+#footer {
+  margin: 2.5em 0;
+}
 
 
 
