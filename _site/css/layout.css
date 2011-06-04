@@ -96,7 +96,6 @@ img.avatar {
 #index #features .col-1, #index #features .col-2, #index #features .col-3 {
   width: 30%;
   margin-right: 5%;
-  float: left;
 }
 #index #features .col-3 {
   margin-right: 0;
