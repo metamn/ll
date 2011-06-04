@@ -5,7 +5,7 @@ layout: default
 #index 
   #intro.block
     .col-1 
-      %h1
+      %h1.large
         Learn
         %br 
         English
@@ -15,14 +15,16 @@ layout: default
     .col-2
       %h1
         with Real People
-      .info
+      #info
         {% for teacher in site.categories.teachers %}
-        .teacher
-          .name.block
-            {{ teacher.name }}, {{ teacher.country }}
+        #teacher
           %ul.inline-list
             %li.irl
               %img{:src => "{{teacher.irl}}", :class => 'avatar', :title => "{{ teacher.name }}" }  
+            %li.name
+              {{ teacher.name }}
+              %br
+              {{ teacher.country }}
             %li.avatar
               %img{:src => "{{teacher.avatar}}", :class => 'avatar', :title => "{{ teacher.name }}"  }                        
         {% endfor %}
@@ -30,34 +32,62 @@ layout: default
     .col-3
       %h1
         in a Virtual 3D City
-      .info
+      #info
         %iframe{:width => 425, :height => 349, :src => "http://www.youtube.com/embed/U9Pgd0YpOoo", :frameborder => "0" }
-        .more
+        #more
           %a{:href => "http://www.youtube.com/user/languagelabdotcom", :target => "_blank", :title => "More videos on Youtube"} See more videos 
-      
+  
   #features.block
     .col-1
-      &nbsp;
+      #twenty
+        %h1.large
+          24/7
+      #home
+        %table
+          %tr
+            %td
+              %img{:src => '/images/home.jpg'}
+            %td
+              %img{:src => '/images/tram.jpg'}
+      #laptop
+        %table
+          %tr
+            %td
+              %img{:src => '/images/pc.jpg'}
+            %td
+              %img{:src => '/images/headphone.jpg'}
+                  
     .col-2
-      %ul{:id => 'flowtabs', :class => 'navi'}
-        %li 
-          %a{:id => "t1", :href => "#relax"} Relax
-        %li 
-          %a{:id => "t2", :href => "#interests"} Follow Your Interests
-        %li 
-          %a{:id => "t3", :href => "#fun"} Have Fun
-        %li 
-          %a{:id => "t4", :href => "#pro"} Be Professional
-      #flowpanes
-        .items
-          .narrow
-          #relax
-            Relax is here ....
-          #interests
-            Follow ur interest ....
-          #fun
-            have fun ....
-          #pro
-            be proooooooooooo
-          .narrow  
+      #levels
+        %ul
+          %li Beginner
+          %li Intermediate
+          %li Advanced
+          %li Refreshing
+      #types
+        %ul
+          %li General
+          %li Business
+          %li British English
+          %li American English
+      #scenarios
+        %ul
+          %li Culture
+          %li Leisure
+          %li Travel
+          %li Health
+    .col-3
+      #countries
+        %h1.large
+          70 Countries
+      #classes
+        %h1.large 
+          6 students / 1 hour
+      #method
+        %table
+          %tr
+            %td
+              %img{:src => '/images/see.jpg'}
+            %td
+              %img{:src => '/images/listen.jpg'}
           
