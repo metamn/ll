@@ -6,7 +6,11 @@ layout: default
   #intro.block
     .col-1 
       %h1
-        Learn English Online
+        Learn
+        %br 
+        English
+        %br 
+        Online
         
     .col-2
       %h1
@@ -27,31 +31,33 @@ layout: default
       %h1
         in a Virtual 3D City
       .info
-        -#%iframe{:width => 425, :height => 349, :src => "http://www.youtube.com/embed/U9Pgd0YpOoo", :frameborder => "0" }
-        video here
+        %iframe{:width => 425, :height => 349, :src => "http://www.youtube.com/embed/U9Pgd0YpOoo", :frameborder => "0" }
         .more
           %a{:href => "http://www.youtube.com/user/languagelabdotcom", :target => "_blank", :title => "More videos on Youtube"} See more videos 
       
   #features.block
-    %ul{:id => 'flowtabs', :class => 'navi'}
-      %li 
-        %a{:id => "t1", :href => "#relax"} Relax
-      %li 
-        %a{:id => "t2", :href => "#interests"} Follow Your Interests
-      %li 
-        %a{:id => "t3", :href => "#fun"} Have Fun
-      %li 
-        %a{:id => "t4", :href => "#pro"} Be Professional
-    #flowpanes
-      .items
-        .narrow
-        #relax
-          Relax is here ....
-        #interests
-          Follow ur interest ....
-        #fun
-          have fun ....
-        #pro
-          be proooooooooooo
-        .narrow  
+    .col-1
+      &nbsp;
+    .col-2
+      %ul{:id => 'flowtabs', :class => 'navi'}
+        %li 
+          %a{:id => "t1", :href => "#relax"} Relax
+        %li 
+          %a{:id => "t2", :href => "#interests"} Follow Your Interests
+        %li 
+          %a{:id => "t3", :href => "#fun"} Have Fun
+        %li 
+          %a{:id => "t4", :href => "#pro"} Be Professional
+      #flowpanes
+        .items
+          .narrow
+          #relax
+            Relax is here ....
+          #interests
+            Follow ur interest ....
+          #fun
+            have fun ....
+          #pro
+            be proooooooooooo
+          .narrow  
           

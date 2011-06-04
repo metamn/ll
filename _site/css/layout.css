@@ -1,6 +1,6 @@
 .container {
-  width: 90%;
-  max-width: 80em;
+  width: 90%; /* 1152px = 72em */
+  max-width: 80em; /* 1280px */
   margin: 0 auto;
 }
 
@@ -49,45 +49,36 @@ img.avatar {
   Index
 */
 
-#index .col-1, #index .col-2, #index .col-3 {
-  width: 30%;
-  margin-right: 5%;
+
+#index .col-1 {
+  width: 20%;
   float: left;
 }
-#index .col-3 {
-  margin-right: 0;
+#index #intro .col-2, #index #intro .col-3 {
+  width: 40%;
+  float: left;
 }
 
 
-#flowtabs {
-    margin: 0 !important;
-    padding: 0;
-    width: 760px;
+#index #features .col-2 {
+  width: 80%;
+  float: left;
+}
+
+
+#flowtabs, #flowpanes, #flowpanes div {
+  width: 57em;
+  padding: 0;
 }
 #flowtabs li {
     float: left;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-indent: 0;
+    list-style-type: none;    
 }
-#flowtabs li a {
-    display: block;
-    height: 31px;
-    line-height: 33px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    text-decoration: none;
-    width: 189px;
-}
-
 #flowpanes {
     clear: both;
     overflow: hidden;
     position: relative;
     height: 450px;
-    width: 760px;
 }
 #flowpanes .items {
     clear: both;
@@ -99,8 +90,6 @@ img.avatar {
 #flowpanes div {
     display: block;
     float: left;
-    font-size: 14px;
-    width: 760px;
 }
 
 
