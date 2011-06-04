@@ -23,15 +23,16 @@ h1 { font-size:1.5em; padding:1.45833em 0; }
 h2 { font-size:1.33333em; padding:1.25em 0; }
 h3 { font-size:1.16667em; padding:1.51785em 0; }
 
-
 h1.large {
   font-size: 4em;
 }
+
 
 img {
   max-width: 100%;
   height: auto;
 }
+
 
 
 
@@ -106,7 +107,13 @@ img.avatar {
 
 
 
-
+#cert img {
+  max-width: 150px;
+  max-height: 100px;
+}
+#cert table td {
+  vertical-align: bottom;
+}
 
 
 
