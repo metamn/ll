@@ -22,7 +22,7 @@ layout: default
             %li.irl
               %img{:src => "{{teacher.irl}}", :class => 'avatar', :title => "{{ teacher.name }}" }  
             %li.name
-              {{ teacher.name }}
+              {{ teacher.title }}
               %br
               {{ teacher.country }}
             %li.avatar
@@ -42,75 +42,81 @@ layout: default
       %tr
         %td.col-1
           %h1.large
-            24/7
+            {% for c in site.categories.comfortable limit:1 offset:1 %}
+            {{ c.short }}
+            {% endfor %}
         %td.col-2
+          {% for c in site.categories.follow-your-interests limit:1 offset:2 %}
           %h4
-            Levels
+            {{ c.short }}
           %ul
-            %li Beginner
-            %li Intermediate
-            %li Advanced
-            %li Refreshing
+            {% for l in c.list %}
+            %li {{ l | capitalize }}
+            {% endfor %}
+          {% endfor %}
         %td.col-3
           %h1.large
-            70 Countries
+            {% for c in site.categories.fun limit:1 offset:1 %}
+            {{ c.short }}
+            {% endfor %}
       %tr
         %td.col-1
+          {% for c in site.categories.comfortable limit:1 offset:2 %}
           %table
             %tr
+              {% for i in c.images %}
               %td
-                %img{:src => '/images/home.jpg'}
-              %td
-                %img{:src => '/images/tram.jpg'}
+                %img{:src => "{{ i.url }}", :alt => 'aaa'}
+              {% endfor %}
+          {% endfor %}            
         %td.col-2
+          {% for c in site.categories.follow-your-interests limit:1 offset:1 %}
           %h4
-            Study Purpose
+            {{ c.short }}
           %ul
-            %li General
-            %li Business
-            %li British English
-            %li American English
-            %li Exam preparation
+            {% for l in c.list %}
+            %li {{ l | capitalize }}
+            {% endfor %}
+          {% endfor %}
         %td.col-3
           %h1.large 
-            6 students / 1 hour
+            {% for c in site.categories.fun limit:1 offset:2 %}
+            {{ c.short }}
+            {% endfor %}
       %tr
         %td.col-1
+          {% for c in site.categories.comfortable limit:1 %}
           %table
             %tr
+              {% for i in c.images %}
               %td
-                %img{:src => '/images/pc.jpg'}
-              %td
-                %img{:src => '/images/headphone.jpg'}
+                %img{:src => "{{ i.url }}", :alt => 'aaa'}
+              {% endfor %}
+          {% endfor %}  
         %td.col-2  
+          {% for c in site.categories.follow-your-interests limit:1 %}
           %h4
-            Topics         
+            {{ c.short }}
           %ul
-            %li Culture
-            %li Leisure
-            %li Travel
-            %li Health
+            {% for l in c.list %}
+            %li {{ l | capitalize }}
+            {% endfor %}
+          {% endfor %}
         %td.col-3
+          {% for c in site.categories.fun limit:1 %}
           %table
             %tr
+              {% for i in c.images %}
               %td
-                %img{:src => '/images/see.jpg'}
-              %td
-                %img{:src => '/images/listen.jpg'}
+                %img{:src => "{{ i.url }}", :alt => 'aaa'}
+              {% endfor %}
+          {% endfor %}  
 
   #cert.block
     %table
       %tr
+        {% for cert in site.categories.certificates %}
         %td
-          %img{:src => '/images/ielts.jpg'}
-        %td
-          %img{:src => '/images/toefl.png'}
-        %td
-          %img{:src => '/images/esol.jpg'}
-        %td
-          %img{:src => '/images/toles.jpg'}
-        %td
-          %img{:src => '/images/lcci.jpg'}
-        %td
-          %img{:src => '/images/bulats.jpg'}
+          %img{:src => "{{ cert.image }}", :alt => 'aa'}
+        {% endfor %}
           

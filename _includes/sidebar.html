@@ -2,7 +2,7 @@
   <h4>Cum functioneaza?</h4>
   <ul>
     <li><a href="">Inscriere</a></li>
-    <li><a href="/teachers/">Profesori</a></li>
+    <li><a href="/teachers">Profesori</a></li>
     <li><a href="">Cursuri</a></li>
     <li><a href="">Colegi</a></li>
     <li><a href="">Scoala virtuala</a></li>
@@ -11,14 +11,15 @@
   
   <h4>Pentru cine?</h4>
   <ul>
-    <li><a href="">Levels</a></li>
-    <li><a href="">Purpose</a></li>
-    <li><a href="">Topics</a></li>    
+    {% for l in site.categories.follow-your-interests reversed %}
+    <li><a href="">{{ l.short }}</a></li>
+    {% endfor %}
   </ul>
   
   <h4>Rezultate, certificate</h4>
   <ul>
-    <li><a href="">IELF</a></li>
-    <li><a href="">TOEFL</a></li>
+    {% for l in site.categories.certificates reversed %}
+    <li><a href="">{{ l.short }}</a></li>
+    {% endfor %}
   </ul>
 </div>

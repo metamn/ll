@@ -8,5 +8,9 @@ title: Features
   
   <div id="main" class="col-2">
     <h1>{{ page.title }}</h1>
+    xxx:
+    {% for c in site.categories.fun %}
+      {{ c.title }}
+    {% endfor %}
   </div>
 </div>
