@@ -53,7 +53,9 @@ img {
   position: relative;
   top: 2.5em;
 }
-
+#header .col-1 {
+  width: 20%;
+}
 
 
 
@@ -91,7 +93,7 @@ img.avatar {
 
 
 
-#features {
+#index #features {
   margin-top: 2.5em;
 }
 #index #features .col-1, #index #features .col-2, #index #features .col-3 {
@@ -101,20 +103,36 @@ img.avatar {
 #index #features .col-3 {
   margin-right: 0;
 }
-#features table td {
+#index #features table td {
   vertical-align: middle;
 }
 
 
 
-#cert img {
+#index #cert img {
   max-width: 150px;
   max-height: 100px;
 }
-#cert table td {
+#index #cert table td {
   vertical-align: bottom;
 }
 
+
+
+
+
+/* Features
+*/
+
+.page .col-1 {
+  width: 20%;
+  float: left;
+}
+.page .col-2 {
+  width: 75%;
+  float: left;
+  margin-left: 5%;
+}
 
 
 

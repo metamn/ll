@@ -1,4 +1,4 @@
-permalink: /:year/:month/:day/:title
+permalink: /:categories/:title
 
 name: Your Logo Here
 strapline: Engeleza la tine acasa

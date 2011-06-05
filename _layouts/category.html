@@ -1,0 +1,15 @@
+---
+layout: page
+---
+
+<div id="archive">
+  <div id="articles">   
+    {% assign total = site.categories[page.category].size %} 
+    {% for p in site.categories[page.category] %}
+      {{ p.education }}
+      <br/>
+    {% endfor %}
+  </div>
+  
+  
+</div>
