@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div id="features" class="page">
+  {% include sidebar.html %}
+  
+  <div id="main" class="col-2">
+    
+    <div id="teacher" class="block">
+      <div class="col-1">
+        <ul>
+          {% for image in page.images %}
+            <li><img src="{{ image.url }}" /></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-2">
+        <h1>{{ page.title }}</h1>
+        <ul>
+          <li>Experience: {{ page.experience }} years</li>
+          <li>Education: {{ page.education }}</li>
+          <li>Country: {{ page.country }}</li>
+        </ul>
+        <div id="body">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
