@@ -10,7 +10,13 @@
           {% endfor %}
         </tr>
       </table>
-    {% endif %}
+    {% else %}
+      {% if item.short %}
+        <h1 class="large">
+          {{ item.short }}
+        </h1>
+      {% endif %}
+    {% endif %}    
   </div>
   <div class="col-2">
     <h2>{{ item.title }}</h2>

@@ -36,7 +36,7 @@ img.teachers {
   width: 100px;
   height: 100px;
 }
-img.certificates {
+img.certificates, #pro img {
   max-width: 150px;
   max-height: 100px;
 }
