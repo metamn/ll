@@ -32,8 +32,14 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-
+img.teachers {
+  width: 100px;
+  height: 100px;
+}
+img.certificates {
+  max-width: 150px;
+  max-height: 100px;
+}
 
 
 
@@ -86,10 +92,7 @@ img {
   position: relative;
   top: -2.5em;
 }
-img.avatar {
-  width: 100px;
-  height: 100px;
-}
+
 
 
 
@@ -109,10 +112,7 @@ img.avatar {
 
 
 
-#index #cert img {
-  max-width: 150px;
-  max-height: 100px;
-}
+
 #index #cert table td {
   vertical-align: bottom;
 }
@@ -133,6 +133,23 @@ img.avatar {
   float: left;
   margin-left: 5%;
 }
+
+
+
+
+/* Item
+*/
+
+#item .col-1 {
+  width: 30%;
+  float: left;
+}
+#item .col-2 {
+  width: 65%;
+  margin-left: 5%;
+  float: left;
+}
+
 
 
 

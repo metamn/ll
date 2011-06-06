@@ -16,17 +16,17 @@ layout: default
       %h1
         with Real People
       #info
-        {% for teacher in site.categories.teachers %}
+        {% for teacher in site.categories.teachers reversed %}
         #teacher
           %ul.inline-list
             %li.irl
-              %img{:src => "{{teacher.irl}}", :class => 'avatar', :title => "{{ teacher.name }}" }  
+              %img{:src => "{{ teacher.images[1].url }}", :class => 'teachers', :title => "{{ teacher.name }}" }  
             %li.name
               {{ teacher.title }}
               %br
               {{ teacher.country }}
             %li.avatar
-              %img{:src => "{{teacher.avatar}}", :class => 'avatar', :title => "{{ teacher.name }}"  }                        
+              %img{:src => "{{ teacher.images[0].url }}", :class => 'teachers', :title => "{{ teacher.name }}"  }                        
         {% endfor %}
         
     .col-3
@@ -115,8 +115,8 @@ layout: default
   #cert.block
     %table
       %tr
-        {% for cert in site.categories.certificates %}
+        {% for cert in site.categories.certificates reversed %}
         %td
-          %img{:src => "{{ cert.image }}", :alt => 'aa'}
+          %img{:src => "{{ cert.images[0].url }}", :class => 'certificates'}
         {% endfor %}
           

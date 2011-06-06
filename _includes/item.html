@@ -1,0 +1,25 @@
+<div id="item" class="block">
+  <div class="col-1">
+    {% if item.images.size > 0 %}
+      <table>
+        <tr>
+          {% for image in item.images %}
+            <td>
+              <img class="{{ page.category }}" src="{{ image.url }}" />
+            </td>
+          {% endfor %}
+        </tr>
+      </table>
+    {% endif %}
+  </div>
+  <div class="col-2">
+    <h2>{{ item.title }}</h2>
+    <div class="excerpt">
+      {% if item.excerpt.size > 0 %}
+        {{ item.excerpt }}
+      {% else %}
+        {{ item.content }}
+      {% endif %}
+    </div>
+  </div>
+</div>

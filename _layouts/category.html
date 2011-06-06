@@ -2,14 +2,12 @@
 layout: page
 ---
 
-<div id="archive">
-  <div id="articles">   
+<div id="category">
+  <div id="items">   
     {% assign total = site.categories[page.category].size %} 
-    {% for p in site.categories[page.category] %}
-      {{ p.title }}
-      <br/>
+    <h1>{{ page.category | capitalize }}  ({{ total }})</h1>
+    {% for item in site.categories[page.category] %}
+      {% include item.html %}
     {% endfor %}
   </div>
-  
-  
 </div>
