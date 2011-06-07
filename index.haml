@@ -11,107 +11,60 @@ layout: default
         English
         %br 
         Online
-      %h1.nopad
+      %h1.real
         with Real People
-      %h1.nopad
+      %h1.virtual
         in a Virtual City  
     .col-2
       #info
         %iframe{:width => 640, :height => 510, :src => "http://www.youtube.com/embed/U9Pgd0YpOoo", :frameborder => "0" }
-        
-      
-        
     .col-3      
       #info
-        {% for teacher in site.categories.teachers reversed limit:3 %}
+        {% for teacher in site.categories.teachers reversed limit:4 %}
         #teacher
           %ul.inline-list
-            %li.irl
-              %img{:src => "{{ teacher.images[1].url }}", :class => 'teachers', :title => "{{ teacher.name }}" }  
+            %li.avatar
+              %img{:src => "{{ teacher.images[0].url }}", :class => 'teachers', :title => "{{ teacher.name }}", :rev => "{{ teacher.images[1].url }}" }                        
             %li.name
               {{ teacher.title }}
               %br
-              {{ teacher.country }}
-            %li.avatar
-              %img{:src => "{{ teacher.images[0].url }}", :class => 'teachers', :title => "{{ teacher.name }}"  }                        
+              {{ teacher.country }}            
         {% endfor %}
-      
-      
         
   #features.block
-    %table
-      %tr
-        %td.col-1
+    #comfortable.block
+      %ul.inline-list
+        {% for c in site.categories.comfortable reversed %}       
+        %li{:class => "col col-{{ forloop.index }}"}
+          %table.inner
+            %tr
+              {% for i in c.images %}
+              %td
+                %img{:src => "{{ i.url }}", :alt => 'aaa'}
+              {% endfor %}
+          %div{:class => 'triangle triangle-top'}
+          #excerpt
+            {{ c.excerpt }}
+        {% endfor %}
+    #follow.block
+      %ul.inline-list
+        {% for c in site.categories.follow-your-interests reversed %}
+        %li{:class => "col col-{{ forloop.index }}"}
+          %h4
+            {{ c.short }}
+          %ul.normal
+            {% for l in c.list %}
+            %li {{ l | capitalize }}
+            {% endfor %}
+        {% endfor %}
+    #fun.block    
+      %ul.inline-list    
+        {% for c in site.categories.fun %}
+        %li{:class => "col col-{{ forloop.index }}"}        
           %h1.large
-            {% for c in site.categories.comfortable limit:1 offset:1 %}
             {{ c.short }}
-            {% endfor %}
-        %td.col-2
-          {% for c in site.categories.follow-your-interests limit:1 offset:2 %}
-          %h4
-            {{ c.short }}
-          %ul
-            {% for l in c.list %}
-            %li {{ l | capitalize }}
-            {% endfor %}
-          {% endfor %}
-        %td.col-3
-          %h1.large
-            {% for c in site.categories.fun limit:1 offset:1 %}
-            {{ c.short }}
-            {% endfor %}
-      %tr
-        %td.col-1
-          {% for c in site.categories.comfortable limit:1 offset:2 %}
-          %table
-            %tr
-              {% for i in c.images %}
-              %td
-                %img{:src => "{{ i.url }}", :alt => 'aaa'}
-              {% endfor %}
-          {% endfor %}            
-        %td.col-2
-          {% for c in site.categories.follow-your-interests limit:1 offset:1 %}
-          %h4
-            {{ c.short }}
-          %ul
-            {% for l in c.list %}
-            %li {{ l | capitalize }}
-            {% endfor %}
-          {% endfor %}
-        %td.col-3
-          %h1.large 
-            {% for c in site.categories.fun limit:1 offset:2 %}
-            {{ c.short }}
-            {% endfor %}
-      %tr
-        %td.col-1
-          {% for c in site.categories.comfortable limit:1 %}
-          %table
-            %tr
-              {% for i in c.images %}
-              %td
-                %img{:src => "{{ i.url }}", :alt => 'aaa'}
-              {% endfor %}
-          {% endfor %}  
-        %td.col-2  
-          {% for c in site.categories.follow-your-interests limit:1 %}
-          %h4
-            {{ c.short }}
-          %ul
-            {% for l in c.list %}
-            %li {{ l | capitalize }}
-            {% endfor %}
-          {% endfor %}
-        %td.col-3
-          {% for c in site.categories.fun limit:1 %}
-          %table
-            %tr
-              {% for i in c.images %}
-              %td
-                %img{:src => "{{ i.url }}", :alt => 'aaa'}
-              {% endfor %}
-          {% endfor %}  
+        {% endfor %}        
+    
 
   #cert.block
     %table

@@ -83,20 +83,19 @@ img.certificates, #pro img {
 */
 
 
-#index #intro .col-1 {
+#index #intro .col-1, #index #intro .col-3 {
   width: 20%;
   float: left;
 }
 #index #intro .col-2 {
-  width: 30%;
-  margin: 0 5%;
+  width: 56%;
+  margin: 0 2%;
   float: left;
   text-align: center;
 }
 #index #intro .col-3 {
-  width: 40%;
+  width: 20%;
   float: left;
-  text-align: center;
 }
 
 #index #intro #teacher ul.inline-list li.name {
@@ -105,9 +104,7 @@ img.certificates, #pro img {
   position: relative;
   top: -2.5em;
 }
-#index .col-3 #info {
-  text-align: right;
-}
+
 
 
 
@@ -115,22 +112,64 @@ img.certificates, #pro img {
 #index #features {
   margin-top: 2.5em;
 }
-#index #features .col-1, #index #features .col-2, #index #features .col-3 {
+#index #features .col {
   width: 30%;
   margin-right: 5%;
+  float: left;
 }
 #index #features .col-3 {
-  margin-right: 0;
-}
-#index #features table td {
-  vertical-align: middle;
+  margin-right: 0%;
 }
 
+#index #features table {
+  margin-bottom: 0;
+}
+#index #features table td {
+  vertical-align: top;
+  padding: .625em;
+  vertical-align: middle;
+  height: 150px;
+}
+
+#index #features #excerpt {
+  padding: 1.25em;
+  height: 3.75em;
+}
+#index #features .triangle-top {
+  border-width: 25px;
+  top: -1.4em;
+}
+#index #features .col-1 .triangle-top {
+  left: 10%;
+}
+#index #features .col-2 .triangle-top {
+  left: 40%;
+}
+#index #features .col-3 .triangle-top {
+  left: 60%;
+}
+
+
+#index #features #follow ul {
+  margin-top: 0;
+}
+#index #features #follow ul.normal li {
+  display: block;
+}
+
+
+#index #features #fun {
+  margin: 2.5em 0;
+  text-align: center;
+}
+#index #features #fun h1 {
+  padding: 0;
+}
 
 
 
 #index #cert table td {
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 

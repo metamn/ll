@@ -14,7 +14,24 @@ a, a:visited {
 
 #index #intro h1.large {
   background: #8D1237;
+  padding-left: .36em;
 }
-.nopad {
-  padding: 0;
+#index #intro h1.real {
+  padding-bottom: 0;
 }
+#index #intro h1.virtual {
+  padding-top: 0;
+}
+
+
+#index #features #excerpt {
+  background: #EFECCA;
+  color: #046380;
+}
+#index #features .triangle-top {
+  border-color: transparent transparent #EFECCA;
+}
+#index #cert img {
+  border: .612em solid white;
+}
+
