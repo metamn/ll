@@ -13,7 +13,13 @@
 
 
 body {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5 {
+  font-family: MuseoSans-500;
+}
+h1, h2, h3 {
+  text-transform: uppercase;
 }
 
 /* Traditional, em */
@@ -24,7 +30,7 @@ h2 { font-size:1.33333em; padding:1.25em 0; }
 h3 { font-size:1.16667em; padding:1.51785em 0; }
 
 h1.large {
-  font-size: 4em;
+  font-size: 3em;
 }
 
 
@@ -63,6 +69,13 @@ img.certificates, #pro img {
   width: 20%;
 }
 
+#menu ul li {
+  margin-right: .625em;
+}
+#menu ul li.last {
+  margin-right: 0;
+}
+
 
 
 
@@ -91,6 +104,9 @@ img.certificates, #pro img {
   width: 100px;
   position: relative;
   top: -2.5em;
+}
+#index .col-3 #info {
+  text-align: right;
 }
 
 

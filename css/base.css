@@ -466,7 +466,6 @@ ul.inline-list li {
   display: inline-block;
   list-style-type: none;
   margin-left: 0;
-  white-space: nowrap; 
 }
 
 

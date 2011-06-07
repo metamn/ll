@@ -11,12 +11,19 @@ layout: default
         English
         %br 
         Online
-        
-    .col-2
-      %h1
+      %h1.nopad
         with Real People
+      %h1.nopad
+        in a Virtual City  
+    .col-2
       #info
-        {% for teacher in site.categories.teachers reversed %}
+        %iframe{:width => 640, :height => 510, :src => "http://www.youtube.com/embed/U9Pgd0YpOoo", :frameborder => "0" }
+        
+      
+        
+    .col-3      
+      #info
+        {% for teacher in site.categories.teachers reversed limit:3 %}
         #teacher
           %ul.inline-list
             %li.irl
@@ -28,15 +35,9 @@ layout: default
             %li.avatar
               %img{:src => "{{ teacher.images[0].url }}", :class => 'teachers', :title => "{{ teacher.name }}"  }                        
         {% endfor %}
+      
+      
         
-    .col-3
-      %h1
-        in a Virtual 3D City
-      #info
-        %iframe{:width => 425, :height => 349, :src => "http://www.youtube.com/embed/U9Pgd0YpOoo", :frameborder => "0" }
-        #more
-          %a{:href => "http://www.youtube.com/user/languagelabdotcom", :target => "_blank", :title => "More videos on Youtube"} See more videos 
-  
   #features.block
     %table
       %tr

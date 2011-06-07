@@ -1,0 +1,20 @@
+body {
+  background: #046380;
+  color: #EFECCA;
+}
+
+a, a:visited {
+  color: #43ADCC;
+  text-decoration: none;
+}
+#menu {
+  font-variant: small-caps;
+}
+
+
+#index #intro h1.large {
+  background: #8D1237;
+}
+.nopad {
+  padding: 0;
+}

@@ -10,8 +10,6 @@ layout: default
     <div id="body">
       {{ content }}
     </div>
-    <div id="more">
-      <a href="/{{ page.categories[0] }}">{{ page.categories[0] }}</a>
-    </div>
+    {% include more.html %}    
   </div>
 </div>
