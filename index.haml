@@ -11,25 +11,25 @@ layout: default
         English
         %br 
         Online
-      %h1.real
-        with Real People
-      %h1.virtual
-        in a Virtual City  
+      #info
+        %h1.real
+          with Real People
+        %h1.virtual
+          in a Virtual City  
     .col-2
-      #info
-        %iframe{:width => 640, :height => 510, :src => "http://www.youtube.com/embed/U9Pgd0YpOoo", :frameborder => "0" }
+      %iframe{:width => 640, :height => 510, :src => "http://www.youtube.com/embed/U9Pgd0YpOoo", :frameborder => "0" }
     .col-3      
-      #info
-        {% for teacher in site.categories.teachers reversed limit:4 %}
-        #teacher
-          %ul.inline-list
-            %li.avatar
+      {% for teacher in site.categories.teachers reversed limit:5 %}
+      #teacher
+        %table
+          %tr
+            %td
               %img{:src => "{{ teacher.images[0].url }}", :class => 'teachers', :title => "{{ teacher.name }}", :rev => "{{ teacher.images[1].url }}" }                        
-            %li.name
+            %td.name
               {{ teacher.title }}
               %br
-              {{ teacher.country }}            
-        {% endfor %}
+              %span.country {{ teacher.country }}            
+      {% endfor %}
         
   #features.block
     #comfortable.block
@@ -61,16 +61,16 @@ layout: default
       %ul.inline-list    
         {% for c in site.categories.fun %}
         %li{:class => "col col-{{ forloop.index }}"}        
-          %h1.large
+          %h1
             {{ c.short }}
         {% endfor %}        
     
-
-  #cert.block
-    %table
-      %tr
-        {% for cert in site.categories.certificates reversed %}
-        %td
-          %img{:src => "{{ cert.images[0].url }}", :class => 'certificates'}
-        {% endfor %}
+  /
+    #cert.block
+      %table
+        %tr
+          {% for cert in site.categories.certificates reversed %}
+          %td
+            %img{:src => "{{ cert.images[0].url }}", :class => 'certificates'}
+          {% endfor %}
           

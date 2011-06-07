@@ -39,8 +39,8 @@ img {
   height: auto;
 }
 img.teachers {
-  width: 100px;
-  height: 100px;
+  width: 83px;
+  height: 83px;
 }
 img.certificates, #pro img {
   max-width: 150px;
@@ -98,11 +98,31 @@ img.certificates, #pro img {
   float: left;
 }
 
-#index #intro #teacher ul.inline-list li.name {
-  margin: 0 1.25em;
-  width: 100px;
-  position: relative;
-  top: -2.5em;
+#index #intro #info {
+  height: 12em;
+}
+#index #intro h1.large {
+  padding-left: .36em;
+}
+#index #intro h1.real, #index #intro h1.virtual {
+  padding-left: .612em;
+}
+#index #intro h1.real {
+  padding-bottom: 0;
+}
+#index #intro h1.virtual {
+  padding-top: 0;
+}
+
+#index #intro #teacher table {
+  margin-bottom: 0;
+}
+#index #intro #teacher td {
+  padding: 0 .612em 1.5em;
+  float: left;
+}
+#index #intro #teacher .country {
+  font-size: smaller;
 }
 
 
@@ -160,7 +180,6 @@ img.certificates, #pro img {
 
 #index #features #fun {
   margin: 2.5em 0;
-  text-align: center;
 }
 #index #features #fun h1 {
   padding: 0;

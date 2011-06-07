@@ -11,17 +11,20 @@ a, a:visited {
   font-variant: small-caps;
 }
 
-
+#index #intro #info {
+  background: #43ADCC;
+}
 #index #intro h1.large {
   background: #8D1237;
-  padding-left: .36em;
 }
-#index #intro h1.real {
-  padding-bottom: 0;
+
+#index #intro #teacher img {
+  -moz-box-shadow: 0 0 10px #43ADCC;
+  -webkit-box-shadow: 0 0 10px #43ADCC;
+  box-shadow: 0 0 10px #43ADCC;
 }
-#index #intro h1.virtual {
-  padding-top: 0;
-}
+
+
 
 
 #index #features #excerpt {
