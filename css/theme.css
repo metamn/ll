@@ -1,40 +1,23 @@
 body {
-  background: #046380;
+  background: url("/images/blue_cityscape.png") no-repeat scroll center top #358EE2;
   color: #EFECCA;
 }
 
-a, a:visited {
-  color: #43ADCC;
-  text-decoration: none;
-}
-#menu {
-  font-variant: small-caps;
-}
 
-#index #intro #info {
-  background: #43ADCC;
+#index #video h1.large {
+  background: #EEC939;
 }
-#index #intro h1.large {
-  background: #8D1237;
-}
-
-#index #intro #teacher img {
-  -moz-box-shadow: 0 0 10px #43ADCC;
-  -webkit-box-shadow: 0 0 10px #43ADCC;
-  box-shadow: 0 0 10px #43ADCC;
+#index #video .col-3 {
+  background: #EC902C;
 }
 
 
-
-
-#index #features #excerpt {
-  background: #EFECCA;
-  color: #046380;
+#index #intro .col-1 {
+  background: #55ACFF;
 }
-#index #features .triangle-top {
-  border-color: transparent transparent #EFECCA;
+#index #intro .col-2 {
+  background: #8B951C;
 }
-#index #cert img {
-  border: .612em solid white;
+#index #intro .col-3 {
+  background: #955F05;
 }
-

@@ -48,6 +48,12 @@ img.certificates, #pro img {
 }
 
 
+a, a:visited {
+  text-decoration: none;
+}
+
+
+
 
 /* Header 
 */
@@ -75,7 +81,9 @@ img.certificates, #pro img {
 #menu ul li.last {
   margin-right: 0;
 }
-
+#menu {
+  font-variant: small-caps;
+}
 
 
 
@@ -83,28 +91,48 @@ img.certificates, #pro img {
 */
 
 
-#index #intro .col-1, #index #intro .col-3 {
-  width: 20%;
+#index .col-1, #index .col-3 {
+  width: 30.5%;
   float: left;
 }
-#index #intro .col-2 {
-  width: 56%;
-  margin: 0 2%;
-  float: left;
-  text-align: center;
-}
-#index #intro .col-3 {
-  width: 20%;
+#index .col-2 {
+  width: 39%;
+  margin: 0;
   float: left;
 }
 
-#index #intro #info {
-  height: 12em;
-}
-#index #intro h1.large {
+#index #video h1.large {
   padding-left: .36em;
+  height: 4.05em;
 }
-#index #intro h1.real, #index #intro h1.virtual {
+#index #video .col-3 {
+  height: 335px;
+}
+#index #teacher {
+  padding: 0 1.25em;
+}
+#index #teacher.item-1 {
+  padding-top: 1.25em;
+}
+#index #teacher table {
+  margin-bottom: 0;
+}
+#index #teacher td {
+  padding: 0 .612em 1.5em;
+  float: left;
+}
+#index #teacher td.name {
+  width: 100px;
+}
+#index #teacher .country {
+  font-size: smaller;
+}
+
+
+#index #intro .col-1, #index #intro .col-2, #index #intro .col-3 {
+  height: 8em;
+}
+#index #intro h1 {
   padding-left: .612em;
 }
 #index #intro h1.real {
@@ -114,41 +142,17 @@ img.certificates, #pro img {
   padding-top: 0;
 }
 
-#index #intro #teacher table {
-  margin-bottom: 0;
+
+
+#index #features .col-2, #index #courses .col-2 {
+  width: 69.5%;
 }
-#index #intro #teacher td {
-  padding: 0 .612em 1.5em;
-  float: left;
-}
-#index #intro #teacher .country {
-  font-size: smaller;
-}
-
-
-
-
-
-#index #features {
-  margin-top: 2.5em;
-}
-#index #features .col {
+#index #features li, #index #courses li {
   width: 30%;
   margin-right: 5%;
-  float: left;
 }
-#index #features .col-3 {
+#index #features li.c-3, #index #courses li.c-3 {
   margin-right: 0%;
-}
-
-#index #features table {
-  margin-bottom: 0;
-}
-#index #features table td {
-  vertical-align: top;
-  padding: .625em;
-  vertical-align: middle;
-  height: 150px;
 }
 
 #index #features #excerpt {
@@ -169,21 +173,6 @@ img.certificates, #pro img {
   left: 60%;
 }
 
-
-#index #features #follow ul {
-  margin-top: 0;
-}
-#index #features #follow ul.normal li {
-  display: block;
-}
-
-
-#index #features #fun {
-  margin: 2.5em 0;
-}
-#index #features #fun h1 {
-  padding: 0;
-}
 
 
 

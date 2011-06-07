@@ -3,39 +3,59 @@ layout: default
 ---
 
 #index 
-  #intro.block
+  #video.block
     .col-1 
       %h1.large
         Learn
         %br 
         English
         %br 
-        Online
-      #info
-        %h1.real
-          with Real People
-        %h1.virtual
-          in a Virtual City  
+        Online       
     .col-2
-      %iframe{:width => 640, :height => 510, :src => "http://www.youtube.com/embed/U9Pgd0YpOoo", :frameborder => "0" }
+      /
+        %iframe{:width => 640, :height => 510, :src => "http://www.youtube.com/embed/U9Pgd0YpOoo", :frameborder => "0" }
+      %img{:src => '/images/video_old.png' }
     .col-3      
-      {% for teacher in site.categories.teachers reversed limit:5 %}
-      #teacher
+      {% for teacher in site.categories.teachers reversed limit:3 %}
+      %div{:id => 'teacher', :class => "item-{{ forloop.index }}"}
         %table
           %tr
             %td
-              %img{:src => "{{ teacher.images[0].url }}", :class => 'teachers', :title => "{{ teacher.name }}", :rev => "{{ teacher.images[1].url }}" }                        
+              %img{:src => "{{ teacher.images[0].url }}", :class => 'teachers', :title => "{{ teacher.name }}"}                        
+            %td
+              %img{:src => "{{ teacher.images[1].url }}", :class => 'teachers', :title => "{{ teacher.name }}"}                        
             %td.name
               {{ teacher.title }}
               %br
               %span.country {{ teacher.country }}            
+            
       {% endfor %}
+  
+  #intro.block
+    .col-1
+      %h1.real
+        with Real People
+      %h1.virtual
+        in a Virtual City 
+    .col-2
+    {% for c in site.categories.fun limit:1 %}
+      %h1
+        {{ c.short }}
+    {% endfor %} 
+    .col-3
+    {% for c in site.categories.fun limit:1 offset:1 %}
+      %h1
+        {{ c.short }}
+    {% endfor %}
         
   #features.block
-    #comfortable.block
+    .col-1
+      %h1.large
+        How it Works?
+    .col-2      
       %ul.inline-list
         {% for c in site.categories.comfortable reversed %}       
-        %li{:class => "col col-{{ forloop.index }}"}
+        %li{:class => "c-{{ forloop.index }}"}
           %table.inner
             %tr
               {% for i in c.images %}
@@ -46,10 +66,15 @@ layout: default
           #excerpt
             {{ c.excerpt }}
         {% endfor %}
-    #follow.block
+  
+  #courses.block
+    .col-1
+      %h1.large
+        What you'll learn?
+    .col-2
       %ul.inline-list
         {% for c in site.categories.follow-your-interests reversed %}
-        %li{:class => "col col-{{ forloop.index }}"}
+        %li{:class => "c-{{ forloop.index }}"}
           %h4
             {{ c.short }}
           %ul.normal
@@ -57,13 +82,8 @@ layout: default
             %li {{ l | capitalize }}
             {% endfor %}
         {% endfor %}
-    #fun.block    
-      %ul.inline-list    
-        {% for c in site.categories.fun %}
-        %li{:class => "col col-{{ forloop.index }}"}        
-          %h1
-            {{ c.short }}
-        {% endfor %}        
+       
+             
     
   /
     #cert.block
