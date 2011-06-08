@@ -190,7 +190,10 @@ a, a:visited {
 
 
 
-
+#index #certs table {
+  margin-bottom: 0;
+  margin-top: 3em;
+}
 #index #certs table td {
   vertical-align: middle;
 }
