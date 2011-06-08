@@ -159,10 +159,10 @@ a, a:visited {
 #index #item.c-3, #index #item.c-3 {
   margin-right: 0%;
 }
-#index table.inner {
+table.inner {
   margin-bottom: 0;
 }
-#index table.inner td {
+table.inner td {
   vertical-align: middle;
   padding: 1.25em;
   padding-bottom: 2em;
@@ -172,11 +172,11 @@ a, a:visited {
 }
 
 
-#index #features #excerpt {
+#excerpt {
   padding: 1.25em;
-  height: 3.75em;
+  min-height: 3.75em;
 }
-#index #features .triangle-top {
+.triangle-top {
   border-width: 25px;
   top: -1.4em;
   left: 10%;
@@ -201,6 +201,19 @@ a, a:visited {
 
 
 
+/* Sidebar
+*/
+
+#sidebar h3 {
+  padding-left: .36em;
+}
+#sidebar ul {
+  margin: 1.25em .612em;
+  list-style-type: none;
+}
+
+
+
 
 /* Features
 */
@@ -214,7 +227,28 @@ a, a:visited {
   float: left;
   margin-left: 5%;
 }
-
+.page h1.large {
+  padding: 0;
+}
+.page h1.large .circle {
+  width: 2em;
+  height: 2em;
+  -moz-border-radius: 3em;
+  text-align: center;
+  position: relative;
+  top: -.36em;
+  margin-right: .36em;
+}
+.page h1.large div {
+  float: left;
+}
+.page h1.large .number {
+  position: relative;
+  top: .36em;
+}
+.page .section {
+  margin-bottom: 5em;
+}
 
 
 
@@ -222,15 +256,17 @@ a, a:visited {
 */
 
 #item .col-1 {
-  width: 30%;
-  float: left;
-}
-#item .col-2 {
-  width: 65%;
+  width: 50%;
   margin-left: 5%;
   float: left;
 }
-
+#item .col-2 {
+  width: 40%;
+  float: left;
+}
+#item table.inner {
+  margin-top: 4em;
+}
 
 
 

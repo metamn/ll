@@ -7,8 +7,11 @@ title: Features
   {% include sidebar.html %}
   
   <div id="main" class="col-2">
-    <div id="comfortable">
-      <h2><span class="circle">1</span>Comfortable</h2>
+    <div id="comfortable" class="section block">
+      <h1 class="large block link">
+        <div class="circle"><span class="number">1</span></div>
+        <div class="title">Comfortable</div>
+      </h1>
       <div id="items">
         {% for item in site.categories.comfortable %}
           {% include item.html %}
@@ -16,27 +19,36 @@ title: Features
       </div>
     </div>
     
-    <div id="follow">
-      <h2><span class="circle">2</span>Follow Your Interests</h2>
-      <div id="items">
+    <div id="follow" class="section block">
+      <h1 class="large block link">
+        <div class="circle"><span class="number">2</span></div>
+        <div class="title">Follow Your Interests</div>
+      </h1>
+      <div id="items" class="hidden">
         {% for item in site.categories.follow-your-interests reversed %}
           {% include item.html %}
         {% endfor %}
       </div>
     </div>
     
-    <div id="fun">
-      <h2><span class="circle">3</span>Have Fun !</h2>
-      <div id="items">
+    <div id="fun" class="section block">
+      <h1 class="large block link">
+        <div class="circle"><span class="number">3</span></div>
+        <div class="title">Have Fun</div>
+      </h1>
+      <div id="items" class="hidden">
         {% for item in site.categories.fun reversed %}
           {% include item.html %}
         {% endfor %}
       </div>
     </div>
     
-    <div id="pro">
-      <h2><span class="circle">4</span>Be Professional</h2>
-      <div id="items">
+    <div id="pro" class="section block">
+      <h1 class="large block link">
+        <div class="circle"><span class="number">4</span></div>
+        <div class="title">Be Professional</div>
+      </h1>
+      <div id="items" class="hidden">
         {% for item in site.categories.certificates reversed %}
           {% include item.html %}
         {% endfor %}

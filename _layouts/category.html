@@ -4,10 +4,15 @@ layout: page
 
 <div id="category">
   <div id="items">   
-    {% assign total = site.categories[page.category].size %} 
-    <h1>{{ page.category | capitalize }}  ({{ total }})</h1>
-    {% for item in site.categories[page.category] %}
-      {% include item.html %}
-    {% endfor %}
+    {% assign total = site.categories[page.category].size %}
+    <h1 class="large block">
+      <div class="circle"><span class="number">{{ total }}</span></div>
+      <div class="title">{{ page.category | capitalize }}</div>
+    </h1> 
+    <div id="items">
+      {% for item in site.categories[page.category] %}
+        {% include item.html %}
+      {% endfor %}
+    </div>
   </div>
 </div>

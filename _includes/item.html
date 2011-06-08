@@ -1,7 +1,18 @@
 <div id="item" class="block">
   <div class="col-1">
+    <h2>{{ item.title }}</h2>
+    <div class="triangle triangle-top"></div>
+    <div id="excerpt">
+      {% if item.excerpt.size > 0 %}
+        {{ item.excerpt }}
+      {% else %}
+        {{ item.content }}
+      {% endif %}
+    </div>
+  </div>
+  <div class="col-2">
     {% if item.images.size > 0 %}
-      <table>
+      <table class="inner">
         <tr>
           {% for image in item.images %}
             <td>
@@ -10,22 +21,6 @@
           {% endfor %}
         </tr>
       </table>
-    {% else %}
-      {% if item.short %}
-        <h1 class="large">
-          {{ item.short }}
-        </h1>
-      {% endif %}
     {% endif %}    
-  </div>
-  <div class="col-2">
-    <h2>{{ item.title }}</h2>
-    <div class="excerpt">
-      {% if item.excerpt.size > 0 %}
-        {{ item.excerpt }}
-      {% else %}
-        {{ item.content }}
-      {% endif %}
-    </div>
   </div>
 </div>

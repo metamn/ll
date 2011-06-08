@@ -89,10 +89,11 @@ layout: default
       %h1.large
         What You'll Get?
     .col-2
-      %table
-        %tr
-          {% for cert in site.categories.certificates reversed %}
-          %td
-            %img{:src => "{{ cert.images[0].url }}", :class => 'certificates'}
-          {% endfor %}
+      /
+        %table
+          %tr
+            {% for cert in site.categories.certificates reversed %}
+            %td
+              %img{:src => "{{ cert.images[0].url }}", :class => 'certificates'}
+            {% endfor %}
           

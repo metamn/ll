@@ -5,8 +5,11 @@ layout: default
 <div id="features" class="page">
   {% include sidebar.html %}
   
-  <div id="main" class="col-2">
-    
+  <div id="main" class="col-2"> 
+    <h1 class="large block link">
+      <div class="title">{{ page.title }}</div>
+    </h1> 
+     
     <div id="teacher" class="block">
       <div class="col-1">
         <ul>
@@ -16,13 +19,13 @@ layout: default
         </ul>
       </div>
       <div class="col-2">
-        <h1>{{ page.title }}</h1>
         <ul>
           <li>Experience: {{ page.experience }} years</li>
           <li>Education: {{ page.education }}</li>
           <li>Country: {{ page.country }}</li>
         </ul>
-        <div id="body">
+        <div class="triangle triangle-top"></div>
+        <div id="excerpt">
           {{ content }}
         </div>
         {% include more.html %}

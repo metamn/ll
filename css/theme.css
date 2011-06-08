@@ -9,6 +9,11 @@ a, a:visited {
   text-shadow: 1px 1px #3896EE;
 }
 
+
+/* Index
+*/
+
+
 #index #video h1.large {
   background: #EEC939;
   text-shadow: 1px 1px #D7A229;
@@ -17,7 +22,6 @@ a, a:visited {
   background: #EC902C;
   text-shadow: 1px 1px #9F692E;
 }
-
 
 #index #intro .col-1 {
   background: #55ACFF;
@@ -32,15 +36,50 @@ a, a:visited {
   text-shadow: 1px 1px #48310A;
 }
 
-#index #features #excerpt {
+#excerpt {
   background: #EFECCA;
   color: #358EE2;
   text-shadow: 1px 1px #F9F9F9;
 }
-#index #features .triangle-top {
+.triangle-top {
   border-color: transparent transparent #EFECCA;
 }
 
 #index #courses ul li {
   border-bottom: 1px solid #7fb8ed;
 }
+
+
+/* Sidebar
+*/
+
+#sidebar {
+  background: #55ACFF;
+}
+#sidebar h3 {
+  background: #EEC939;
+  text-shadow: 1px 1px #F1DA81;
+  color: #6E5D1A;
+}
+#sidebar ul li {
+  border-bottom: 1px dotted #358EE2;
+}
+#sidebar a, #sidebar a:visited {
+  color: #2A567F;
+  text-shadow: 1px 1px #A1D2FF;
+}
+
+
+
+/* Features
+*/
+
+#features .circle {
+  background: #EFECCA;
+  color: #358EE2;
+  text-shadow: 1px 1px #F9F9F9;
+}
+
+
+
+
