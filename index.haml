@@ -53,9 +53,9 @@ layout: default
       %h1.large
         How it Works?
     .col-2      
-      %ul.inline-list
+      #items
         {% for c in site.categories.comfortable reversed %}       
-        %li{:class => "c-{{ forloop.index }}"}
+        #item{:class => "c-{{ forloop.index }}"}
           %table.inner
             %tr
               {% for i in c.images %}
@@ -72,10 +72,10 @@ layout: default
       %h1.large
         What you'll learn?
     .col-2
-      %ul.inline-list
+      #items
         {% for c in site.categories.follow-your-interests reversed %}
-        %li{:class => "c-{{ forloop.index }}"}
-          %h4
+        #item{:class => "c-{{ forloop.index }}"}
+          %h3
             {{ c.short }}
           %ul.normal
             {% for l in c.list %}
@@ -83,10 +83,12 @@ layout: default
             {% endfor %}
         {% endfor %}
        
-             
     
-  /
-    #cert.block
+  #certs.block
+    .col-1
+      %h1.large
+        What You'll Get?
+    .col-2
       %table
         %tr
           {% for cert in site.categories.certificates reversed %}

@@ -143,17 +143,34 @@ a, a:visited {
 }
 
 
-
-#index #features .col-2, #index #courses .col-2 {
+#index #features {
+  margin: 2.5em 0;
+}
+#index #features .col-2, 
+#index #courses .col-2,
+#index #certs .col-2 {
   width: 69.5%;
 }
-#index #features li, #index #courses li {
-  width: 30%;
+#index #item, #index #item {
+  width: 29%;
   margin-right: 5%;
+  float: left;
 }
-#index #features li.c-3, #index #courses li.c-3 {
+#index #item.c-3, #index #item.c-3 {
   margin-right: 0%;
 }
+#index table.inner {
+  margin-bottom: 0;
+}
+#index table.inner td {
+  vertical-align: middle;
+  padding: 1.25em;
+  padding-bottom: 2em;
+}
+#index #features .c-1 table {
+  margin-bottom: 1em;
+}
+
 
 #index #features #excerpt {
   padding: 1.25em;
@@ -162,21 +179,19 @@ a, a:visited {
 #index #features .triangle-top {
   border-width: 25px;
   top: -1.4em;
-}
-#index #features .col-1 .triangle-top {
   left: 10%;
 }
-#index #features .col-2 .triangle-top {
-  left: 40%;
+
+
+#index #courses ul {
+  list-style-type: none;
+  margin-left: 0;
 }
-#index #features .col-3 .triangle-top {
-  left: 60%;
-}
 
 
 
 
-#index #cert table td {
+#index #certs table td {
   vertical-align: middle;
 }
 

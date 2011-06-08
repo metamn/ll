@@ -1,23 +1,46 @@
 body {
   background: url("/images/blue_cityscape.png") no-repeat scroll center top #358EE2;
   color: #EFECCA;
+  text-shadow: 1px 1px #4F4F7C;
 }
 
+a, a:visited {
+  color: #173E62;
+  text-shadow: 1px 1px #3896EE;
+}
 
 #index #video h1.large {
   background: #EEC939;
+  text-shadow: 1px 1px #D7A229;
 }
 #index #video .col-3 {
   background: #EC902C;
+  text-shadow: 1px 1px #9F692E;
 }
 
 
 #index #intro .col-1 {
   background: #55ACFF;
+  text-shadow: 1px 1px #426BE8;
 }
 #index #intro .col-2 {
   background: #8B951C;
+  text-shadow: 1px 1px #434806;
 }
 #index #intro .col-3 {
   background: #955F05;
+  text-shadow: 1px 1px #48310A;
+}
+
+#index #features #excerpt {
+  background: #EFECCA;
+  color: #358EE2;
+  text-shadow: 1px 1px #F9F9F9;
+}
+#index #features .triangle-top {
+  border-color: transparent transparent #EFECCA;
+}
+
+#index #courses ul li {
+  border-bottom: 1px solid #7fb8ed;
 }
