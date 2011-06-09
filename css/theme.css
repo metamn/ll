@@ -9,6 +9,12 @@ a, a:visited {
   text-shadow: 1px 1px #3896EE;
 }
 
+img.teachers {
+  -moz-box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;   
+}
+
 
 /* Index
 */
@@ -23,6 +29,7 @@ a, a:visited {
   text-shadow: 1px 1px #9F692E;
 }
 
+
 #index #intro .col-1 {
   background: #55ACFF;
   text-shadow: 1px 1px #426BE8;
@@ -36,12 +43,13 @@ a, a:visited {
   text-shadow: 1px 1px #48310A;
 }
 
-#excerpt {
+
+#index #excerpt {
   background: #EFECCA;
   color: #358EE2;
   text-shadow: 1px 1px #F9F9F9;
 }
-.triangle-top {
+#index .triangle-top {
   border-color: transparent transparent #EFECCA;
 }
 
@@ -79,6 +87,26 @@ a, a:visited {
   color: #358EE2;
   text-shadow: 1px 1px #F9F9F9;
 }
+.page #excerpt {
+  background: #55ACFF;
+  color: #2A567F;
+  text-shadow: none;
+}
+.page .triangle-top {
+  border-color: transparent transparent #55ACFF;
+}
+
+
+
+/* Articles 
+*/
+
+#teacher ul#experience li {
+  border-bottom: 1px solid #7FB8ED;
+}
+
+
+
 
 
 

@@ -2,31 +2,33 @@
 layout: default
 ---
 
-<div id="features" class="page">
+<div id="teachers" class="page">
   {% include sidebar.html %}
   
   <div id="main" class="col-2"> 
-    <h1 class="large block link">
+    <h1 class="large block">
       <div class="title">{{ page.title }}</div>
     </h1> 
      
     <div id="teacher" class="block">
       <div class="col-1">
-        <ul>
+        <ul id="images">
           {% for image in page.images %}
-            <li><img src="{{ image.url }}" /></li>
+            <li><img src="{{ image.url }}" class="teachers"/></li>
           {% endfor %}
         </ul>
       </div>
       <div class="col-2">
-        <ul>
+        <ul id="experience">
           <li>Experience: {{ page.experience }} years</li>
           <li>Education: {{ page.education }}</li>
           <li>Country: {{ page.country }}</li>
         </ul>
-        <div class="triangle triangle-top"></div>
-        <div id="excerpt">
-          {{ content }}
+        <div id="body" class="block">
+          <div class="triangle triangle-top"></div>
+          <div id="excerpt">
+            {{ content }}
+          </div>
         </div>
         {% include more.html %}
       </div>

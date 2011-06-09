@@ -2,16 +2,18 @@
 layout: default
 ---
 
-<div id="features" class="page">
+<div id="article" class="page">
   {% include sidebar.html %}
   
   <div id="main" class="col-2">
     <h1 class="large block">
       <div class="title">{{ page.title }}</div>
     </h1>
-    <div class="triangle triangle-top"></div>
-    <div id="excerpt">
-      {{ content }}
+    <div id="body" class="block">
+      <div class="triangle triangle-top"></div>
+      <div id="excerpt">
+        {{ content }}
+      </div>
     </div>
     {% include more.html %}    
   </div>

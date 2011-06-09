@@ -38,14 +38,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-img.teachers {
-  width: 83px;
-  height: 83px;
-}
-img.certificates, #pro img {
-  max-width: 150px;
-  max-height: 100px;
-}
+
 
 
 a, a:visited {
@@ -127,6 +120,10 @@ a, a:visited {
 #index #teacher .country {
   font-size: smaller;
 }
+#index img.teachers {
+  width: 83px;
+  height: 83px;
+}
 
 
 #index #intro .col-1, #index #intro .col-2, #index #intro .col-3 {
@@ -178,7 +175,7 @@ table.inner td {
 }
 .triangle-top {
   border-width: 25px;
-  top: -1.4em;
+  top: -2em;
   left: 10%;
 }
 
@@ -248,6 +245,56 @@ table.inner td {
 }
 .page .section {
   margin-bottom: 5em;
+}
+
+
+/* Teachers
+*/
+
+#teachers img.teachers {
+  width: 100px;
+  height: 100px;
+}
+#teachers #teacher {
+  margin-top: 1.25em;
+}
+#teacher .col-1 {
+  width: 100px;
+  margin-right: 0;
+}
+#teacher ul#images, #teacher ul#experience {
+  list-style-type: none;
+  margin-left: 0;
+}
+#teacher ul#images li {
+  margin-bottom: 2.3em;
+}
+#teacher #body {
+  margin: 1.25em 0;
+}
+#teacher .triangle-top {
+  left: 5%;
+}
+
+
+
+/* Articles
+*/
+#article #body {
+  margin: 2.5em 0;
+}
+#article .triangle-top {
+  left: 5%;
+}
+
+#more #items #item .triangle, #more #items #item #excerpt, #more #items #item .col-2 {
+  display: none;
+} 
+#more #item h2 {
+  padding-bottom: 0;
+}
+#more #item .col-1 {
+  width: auto;
 }
 
 

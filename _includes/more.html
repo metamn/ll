@@ -1,3 +1,15 @@
 <div id="more">
-  See more from <a href="/{{ page.categories[0] }}">{{ page.categories[0] | capitalize }}</a>
+  <p>
+    See more from <a href="/{{ page.categories[0] }}">{{ page.categories[0] | capitalize }}</a>
+  </p>
+  
+  <div id="items">
+    {% for item in site:posts %}
+      {% if item.categories[0] == page.categories[0] %}
+        {% if item.title != page.title %}
+          {% include item.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>  
 </div>

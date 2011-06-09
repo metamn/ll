@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<div id="category">
+<div id="{{ page.category }}" class="category">
   <div id="items">   
     {% assign total = site.categories[page.category].size %}
     <h1 class="large block">
