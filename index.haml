@@ -83,7 +83,8 @@ layout: default
             {{ c.short }}
           %ul.normal
             {% for l in c.list %}
-            %li {{ l | capitalize }}
+            %li{:class => 'link', :title => '<h3>{{l |capitalize}}</h3> A short description goes here ...<br/>Clicking on this link will load the associated article'} 
+              {{ l | capitalize }}
             {% endfor %}
         {% endfor %}
        

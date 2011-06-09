@@ -65,9 +65,29 @@ img.teachers {
 #index .triangle-top {
   border-color: transparent transparent #EFECCA;
 }
+#index #features #item.highlight #excerpt {
+  background: white;  
+}
+#index #features #item.highlight .triangle-top {
+  border-color: transparent transparent white;
+}
+
 
 #index #courses ul li {
   border-bottom: 1px solid #7fb8ed;
+}
+#tiptip_content {
+  font-size: 100%;
+  padding: 1.25em .612em;
+  background: #8B951C;
+  text-shadow: 1px 1px #434806;
+  color: #EFECCA;
+}
+#tiptip_content h3 {
+  padding-top: 0;
+}
+#tiptip_holder.tip_top #tiptip_arrow_inner {
+	border-top-color: #8B951C;
 }
 
 
