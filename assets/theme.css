@@ -86,8 +86,11 @@ img.teachers {
 #tiptip_content h3 {
   padding-top: 0;
 }
-#tiptip_holder.tip_top #tiptip_arrow_inner {
-	border-top-color: #8B951C;
+#tiptip_holder.tip_right #tiptip_arrow_inner {
+	border-right-color: #8B951C;
+}
+#tiptip_holder.tip_left #tiptip_arrow_inner {
+	border-left-color: #8B951C;
 }
 
 

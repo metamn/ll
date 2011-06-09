@@ -114,6 +114,9 @@ a, a:visited {
   padding: 0 .612em 1.5em;
   float: left;
 }
+#index #teacher img {
+  position: relative;
+}
 #index #teacher td.name {
   width: 100px;
 }

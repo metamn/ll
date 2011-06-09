@@ -20,12 +20,10 @@ layout: default
       %div{:id => 'teacher', :class => "item-{{ forloop.index }}"}
         %table
           %tr
-            %td
-              %a{:href => "{{ teacher.url }}", :title => "{{ teacher.title }}", :class => "white"}
-                %img{:src => "{{ teacher.images[0].url }}", :class => 'teachers', :title => "{{ teacher.name }}"}                        
-            %td
-              %a{:href => "{{ teacher.url }}", :title => "{{ teacher.title }}", :class => "white"}
-                %img{:src => "{{ teacher.images[1].url }}", :class => 'teachers', :title => "{{ teacher.name }}"}                        
+            %td{:class => 'img-1'}              
+              %img{:src => "{{ teacher.images[0].url }}", :class => "link teachers", :title => "{{ teacher.name }}", :style => ''}                        
+            %td{:class => 'img-2'}
+              %img{:src => "{{ teacher.images[1].url }}", :class => "link teachers", :title => "{{ teacher.name }}", :style => ''}                        
             %td.name
               %a{:href => "{{ teacher.url }}", :title => "{{ teacher.title }}", :class => "white"}
                 {{ teacher.title }}
