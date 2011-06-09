@@ -4,7 +4,7 @@
   <head>
     <title>
       {% if page.title != _blank %}
-        {{ page.title }} - {{ site.name }}
+        {{ page.title | capitalize }} - {{ site.name }}
       {% else %}
         {{ site.strapline }} - {{ site.name }}
       {% endif %}

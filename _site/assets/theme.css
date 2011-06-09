@@ -4,10 +4,23 @@ body {
   text-shadow: 1px 1px #4F4F7C;
 }
 
+
 a, a:visited {
   color: #173E62;
   text-shadow: 1px 1px #3896EE;
 }
+a.white, a.white:visited {
+  color: #EFECCA;
+  text-shadow: 1px 1px #4F4F7C;
+}
+a.blue, a.blue:visited {
+  color: #358EE2;
+  text-shadow: 1px 1px #F9F9F9;
+}
+a:hover {
+  text-shadow: none !important;
+}
+
 
 img.teachers {
   -moz-box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
@@ -102,7 +115,7 @@ img.teachers {
 */
 
 #teacher ul#experience li {
-  border-bottom: 1px solid #7FB8ED;
+  border-bottom: 1px dotted #55ACFF;
 }
 
 

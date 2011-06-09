@@ -21,14 +21,16 @@ layout: default
         %table
           %tr
             %td
-              %img{:src => "{{ teacher.images[0].url }}", :class => 'teachers', :title => "{{ teacher.name }}"}                        
+              %a{:href => "{{ teacher.url }}", :alt => "{{ teacher.title }}", :class => "white"}
+                %img{:src => "{{ teacher.images[0].url }}", :class => 'teachers', :title => "{{ teacher.name }}"}                        
             %td
-              %img{:src => "{{ teacher.images[1].url }}", :class => 'teachers', :title => "{{ teacher.name }}"}                        
+              %a{:href => "{{ teacher.url }}", :alt => "{{ teacher.title }}", :class => "white"}
+                %img{:src => "{{ teacher.images[1].url }}", :class => 'teachers', :title => "{{ teacher.name }}"}                        
             %td.name
-              {{ teacher.title }}
-              %br
-              %span.country {{ teacher.country }}            
-            
+              %a{:href => "{{ teacher.url }}", :alt => "{{ teacher.title }}", :class => "white"}
+                {{ teacher.title }}
+                %br
+                %span.country {{ teacher.country }}                        
       {% endfor %}
   
   #intro.block
@@ -60,11 +62,13 @@ layout: default
             %tr
               {% for i in c.images %}
               %td
-                %img{:src => "{{ i.url }}", :alt => 'aaa'}
+                %a{:href => "{{ c.url }}", :alt => "{{ c.title }}" }
+                  %img{:src => "{{ i.url }}", :alt => '{{ c.title }}'}
               {% endfor %}
           %div{:class => 'triangle triangle-top'}
           #excerpt
-            {{ c.excerpt }}
+            %a{:href => "{{ c.url }}", :alt => "{{ c.title }}", :class => "blue"}
+              {{ c.excerpt }}
         {% endfor %}
   
   #courses.block

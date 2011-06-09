@@ -1,6 +1,8 @@
 <div id="item" class="block">
   <div class="col-1">
-    <h2>{{ item.title }}</h2>
+    <a href="{{ item.url }}" title="{{ item.title }}" class="white">
+      <h2>{{ item.title }}</h2>
+    </a>
     <div class="triangle triangle-top"></div>
     <div id="excerpt">
       {% if item.excerpt.size > 0 %}
@@ -16,7 +18,9 @@
         <tr>
           {% for image in item.images %}
             <td>
-              <img class="{{ page.category }}" src="{{ image.url }}" />
+              <a href="{{ item.url }}" title="{{ item.title }}">
+                <img class="{{ page.category }}" src="{{ image.url }}" />
+              </a>
             </td>
           {% endfor %}
         </tr>
