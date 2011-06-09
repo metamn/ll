@@ -52,7 +52,7 @@ a, a:visited {
 */
 
 #header {
-  margin-bottom: 2.5em;
+  margin-bottom: 2em;
 }
 #header h1 {
   padding-bottom: 0;
@@ -141,7 +141,7 @@ a, a:visited {
 
 
 #index #features {
-  margin: 2.5em 0;
+  margin: 2.3em 0 2.6em;
 }
 #index #features .col-2, 
 #index #courses .col-2,
@@ -175,7 +175,7 @@ table.inner td {
 }
 .triangle-top {
   border-width: 25px;
-  top: -2em;
+  top: -1.4em;
   left: 10%;
 }
 
@@ -272,7 +272,7 @@ table.inner td {
   margin-bottom: 2.3em;
 }
 #teacher #body {
-  margin: 1.25em 0;
+  margin: 1em 0;
 }
 #teacher .triangle-top {
   left: 5%;
@@ -293,7 +293,11 @@ table.inner td {
   display: none;
 } 
 #more #item h2 {
-  padding-bottom: 0;
+  padding: 0;
+}
+#more #item {
+  height: 1.25em;
+  padding-top: 1.25em;
 }
 #more #item .col-1 {
   width: auto;
@@ -323,7 +327,7 @@ table.inner td {
 */
 
 #footer {
-  margin: 2.5em 0;
+  margin: 2.3em 0;
 }
 
 

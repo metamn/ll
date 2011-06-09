@@ -53,7 +53,7 @@ layout: default
       %h1.large
         How it Works?
     .col-2      
-      #items
+      #items.block
         {% for c in site.categories.comfortable reversed %}       
         #item{:class => "c-{{ forloop.index }}"}
           %table.inner
