@@ -231,6 +231,8 @@ table.inner td {
   width: 2em;
   height: 2em;
   -moz-border-radius: 3em;
+  -webkit-border-radius: 3em;
+  border-radius: 3em;
   text-align: center;
   position: relative;
   top: -.36em;
