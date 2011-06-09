@@ -21,13 +21,13 @@ layout: default
         %table
           %tr
             %td
-              %a{:href => "{{ teacher.url }}", :alt => "{{ teacher.title }}", :class => "white"}
+              %a{:href => "{{ teacher.url }}", :title => "{{ teacher.title }}", :class => "white"}
                 %img{:src => "{{ teacher.images[0].url }}", :class => 'teachers', :title => "{{ teacher.name }}"}                        
             %td
-              %a{:href => "{{ teacher.url }}", :alt => "{{ teacher.title }}", :class => "white"}
+              %a{:href => "{{ teacher.url }}", :title => "{{ teacher.title }}", :class => "white"}
                 %img{:src => "{{ teacher.images[1].url }}", :class => 'teachers', :title => "{{ teacher.name }}"}                        
             %td.name
-              %a{:href => "{{ teacher.url }}", :alt => "{{ teacher.title }}", :class => "white"}
+              %a{:href => "{{ teacher.url }}", :title => "{{ teacher.title }}", :class => "white"}
                 {{ teacher.title }}
                 %br
                 %span.country {{ teacher.country }}                        
@@ -62,12 +62,12 @@ layout: default
             %tr
               {% for i in c.images %}
               %td
-                %a{:href => "{{ c.url }}", :alt => "{{ c.title }}" }
+                %a{:href => "{{ c.url }}", :title => "{{ c.title }}" }
                   %img{:src => "{{ i.url }}", :alt => '{{ c.title }}'}
               {% endfor %}
           %div{:class => 'triangle triangle-top'}
           #excerpt
-            %a{:href => "{{ c.url }}", :alt => "{{ c.title }}", :class => "blue"}
+            %a{:href => "{{ c.url }}", :title => "{{ c.title }}", :class => "blue"}
               {{ c.excerpt }}
         {% endfor %}
   
@@ -93,11 +93,10 @@ layout: default
       %h1.large
         What You'll Get?
     .col-2
-      /
-        %table
-          %tr
-            {% for cert in site.categories.certificates reversed %}
-            %td
-              %img{:src => "{{ cert.images[0].url }}", :class => 'certificates'}
-            {% endfor %}
+      %table
+        %tr
+          {% for cert in site.categories.certificates reversed limit:4 %}
+          %td
+            %img{:src => "{{ cert.images[0].url }}", :class => 'certificates'}
+          {% endfor %}
           
